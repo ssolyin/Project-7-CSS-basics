@@ -1,0 +1,136 @@
+body {
+    background: radial-gradient( rgb(67, 32, 165), rgb(179, 196, 28), rgb(0, 0, 0), rgb(100, 55, 206));
+    font-family: "Comic Sans MS", cursive;
+    height: 1000px;
+}
+
+#header {
+    background-color: rgb(134, 38, 70);
+    color: rgb(53, 182, 85);
+    text-align: center;
+    font-size: 3em;
+    padding: 10px;
+    border: 20px outset rgb(122, 72, 6);
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    background: purple;
+    padding: 15px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: rgb(55, 27, 129);
+    background: rgb(178, 180, 29);
+    transition: 1s;
+}
+
+.content {
+    margin: 20px;
+    padding: 15px;
+    border: 10px double green;
+}
+
+.floating-box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    float: left;
+    margin: 30px;
+}
+
+.misaligned-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap-reverse;
+    border: 30px outset black;
+    padding: 10px;
+}
+
+.flex-item {
+    background: blue;
+    color: white;
+    font-size: 2em;
+    flex-grow: 5;
+    padding: 20px;
+    border: 2px dotted red;
+    animation: textBlink 0.1s infinite alternate;
+}
+@keyframes textBlink {
+    0% { color: white; }
+    50% { color: transparent; }
+    100% { color: white; }
+}
+
+.absolute-box {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    background: brown;
+    padding: 20px;
+    border: 4px groove white;
+}
+
+.rotating-text {
+    display: inline-block;
+    font-weight: bold;
+    color: rgb(134, 202, 44);
+    font-size: 2em;
+    animation: rotate 1s infinite alternate ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(15deg);
+    }
+}
+
+footer {
+    background: black;
+    color: rgb(15, 82, 18);
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    border-top: 5px solid white;
+}
+
+@media (max-width: 800px) {
+    body {
+        background: black !important;
+        color: neon !important;
+    }
+
+    .floating-box {
+        width: 300px;
+        height: 300px;
+        background: rgb(0, 197, 10);
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        transform: rotate(180deg);
+    }
+
+    .content {
+        font-size: 5em;
+    }
+}
